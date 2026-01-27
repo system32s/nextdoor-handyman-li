@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import Hero from '../../components/Hero.astro';
+import { services, businessInfo } from '../../data/services';
+
+const title = 'Handyman Services in Suffolk County, NY | All Services | NextDoor Handyman';
+const description = 'Explore our complete range of handyman services in Suffolk County, NY. From plumbing and electrical to furniture assembly and TV mounting. Quality work guaranteed.';
+---
+
+<BaseLayout title={title} description={description} canonicalUrl="/services">
+  <Hero
+    title="Our Handyman Services"
+    subtitle="Professional home repair and improvement services for every need. Quality craftsmanship, honest pricing, and reliable service throughout Suffolk County."
+  />
+
+  <!-- Services Grid -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.map((service) => (
+          <ServiceCard
+            slug={service.slug}
+            name={service.name}
+            description={service.shortDescription}
+            icon={service.icon}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us for Services -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">
+          Why Choose NextDoor Handyman?
+        </h2>
+        <p class="text-xl text-gray-600">
+          We're committed to providing exceptional service on every project, big or small.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
+            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-dark mb-2">Licensed & Insured</h3>
+          <p class="text-gray-600 text-sm">Full protection and peace of mind on every job</p>
+        </div>
+
+        <div class="text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
+            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-dark mb-2">Upfront Pricing</h3>
+          <p class="text-gray-600 text-sm">No hidden fees, no surprises after the job</p>
+        </div>
+
+        <div class="text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
+            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-dark mb-2">On-Time Service</h3>
+          <p class="text-gray-600 text-sm">We respect your time and show up when promised</p>
+        </div>
+
+        <div class="text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
+            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-dark mb-2">Quality Guaranteed</h3>
+          <p class="text-gray-600 text-sm">Satisfaction guaranteed on every project</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-primary text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Don't See What You Need?
+      </h2>
+      <p class="text-xl text-gray-200 mb-8">
+        We handle a wide variety of home repairs and improvements. Contact us to discuss your project - chances are, we can help!
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/contact"
+          class="inline-flex items-center justify-center bg-accent hover:bg-accent-hover text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors"
+        >
+          Request a Free Quote
+        </a>
+        <a
+          href="tel:+16312954020"
+          class="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors border border-white/20"
+        >
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          Call {businessInfo.phone}
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

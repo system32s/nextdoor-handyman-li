@@ -1,0 +1,210 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import { businessInfo, services } from '../data/services';
+
+const title = 'About Us | NextDoor Handyman Long Island | Suffolk County, NY';
+const description = 'Learn about NextDoor Handyman Long Island - your trusted local handyman service in Suffolk County, NY. Experienced, licensed, and committed to quality workmanship.';
+---
+
+<BaseLayout title={title} description={description} canonicalUrl="/about">
+  <Hero
+    title="About NextDoor Handyman"
+    subtitle="Your trusted local handyman service, committed to quality workmanship and exceptional customer service throughout Suffolk County."
+    showCta={false}
+  />
+
+  <!-- Our Story -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6">
+            Our Story
+          </h2>
+          <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+            NextDoor Handyman Long Island was founded with a simple mission: to provide Suffolk County homeowners with reliable, high-quality handyman services they can trust. Based in Yaphank, we're not just a business — we're your neighbors.
+          </p>
+          <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+            We understand the frustration of finding a dependable handyman. That's why we built our company on the principles of honesty, quality, and respect for our customers' time and homes. When you call NextDoor Handyman, you're not getting a faceless corporation — you're getting a local team that takes pride in every job we complete.
+          </p>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            From small repairs to larger home improvement projects, we approach every task with the same attention to detail and commitment to excellence. Our goal is simple: to be the handyman service you call first and recommend to friends.
+          </p>
+        </div>
+
+        <div class="bg-gray-100 rounded-2xl p-8 lg:p-12">
+          <div class="grid grid-cols-2 gap-6">
+            <div class="text-center p-6 bg-white rounded-xl">
+              <div class="text-4xl font-bold text-primary mb-2">10+</div>
+              <div class="text-gray-600">Years of Experience</div>
+            </div>
+            <div class="text-center p-6 bg-white rounded-xl">
+              <div class="text-4xl font-bold text-primary mb-2">500+</div>
+              <div class="text-gray-600">Projects Completed</div>
+            </div>
+            <div class="text-center p-6 bg-white rounded-xl">
+              <div class="text-4xl font-bold text-primary mb-2">100%</div>
+              <div class="text-gray-600">Satisfaction Rate</div>
+            </div>
+            <div class="text-center p-6 bg-white rounded-xl">
+              <div class="text-4xl font-bold text-primary mb-2">{services.length}</div>
+              <div class="text-gray-600">Service Categories</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Values -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">
+          Our Core Values
+        </h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          These principles guide everything we do and set us apart from other handyman services.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white rounded-xl p-6 shadow-sm text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
+            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-dark mb-2">Integrity</h3>
+          <p class="text-gray-600">We're honest about what needs to be done and what it will cost. No surprises, no upselling.</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-sm text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
+            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-dark mb-2">Quality</h3>
+          <p class="text-gray-600">We take pride in our craftsmanship. Every job is completed to the highest standard.</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-sm text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
+            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-dark mb-2">Reliability</h3>
+          <p class="text-gray-600">We show up on time, communicate clearly, and do what we say we'll do.</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-sm text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
+            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-dark mb-2">Respect</h3>
+          <p class="text-gray-600">We treat your home like our own. Clean workspaces, protective covers, thorough cleanup.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Sets Us Apart -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1">
+          <div class="bg-primary rounded-2xl p-8 lg:p-12 text-white">
+            <h3 class="text-2xl font-bold mb-6">What You Can Expect</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Free, detailed estimates before any work begins</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Clear communication throughout your project</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Professional, courteous service every time</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Clean, organized work areas during and after the job</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Quality workmanship that stands the test of time</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Follow-up to ensure your complete satisfaction</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="order-1 lg:order-2">
+          <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6">
+            What Sets Us Apart
+          </h2>
+          <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+            In a world of large, impersonal home service companies, we're proud to be different. As a local business, we're accountable to our community. Our reputation is built one satisfied customer at a time.
+          </p>
+          <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+            We're not interested in quick fixes that need to be redone in a few months. We take the time to do the job right the first time, using quality materials and proven techniques.
+          </p>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            When you choose NextDoor Handyman, you're choosing a partner who genuinely cares about your home and your satisfaction.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-accent">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+        Ready to Experience the Difference?
+      </h2>
+      <p class="text-xl text-white/90 mb-8">
+        Let us show you why Suffolk County homeowners trust NextDoor Handyman for their home repair and improvement needs.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/contact"
+          class="inline-flex items-center justify-center bg-white hover:bg-gray-100 text-primary font-semibold px-8 py-4 rounded-lg text-lg transition-colors"
+        >
+          Get Your Free Quote
+        </a>
+        <a
+          href="tel:+16312954020"
+          class="inline-flex items-center justify-center bg-transparent hover:bg-white/10 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors border-2 border-white"
+        >
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          Call {businessInfo.phone}
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
