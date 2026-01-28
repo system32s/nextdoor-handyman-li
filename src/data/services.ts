@@ -385,7 +385,7 @@ export const businessInfo = {
   city: 'Yaphank',
   state: 'NY',
   zipCode: '11980',
-  hours: 'Monday - Saturday: 7:00 AM - 6:00 PM',
+  hours: 'Monday - Saturday: 9:00 AM - 6:00 PM',
   description: 'Your trusted local handyman service in Suffolk County, Long Island. We provide professional home repair, maintenance, and improvement services.',
 };
 
